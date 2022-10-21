@@ -39,8 +39,12 @@ export class AudienceReachComponent implements OnInit {
       title: {
         text: 'Audience reach',
         align: 'left',
-        offsetY: 25,
-        offsetX: 20,
+        offsetY: 20,
+        style: {
+          fontSize: '20px',
+          fontWeight: 'bold',
+          fontFamily: undefined,
+        },
       },
       markers: {
         size: 6,

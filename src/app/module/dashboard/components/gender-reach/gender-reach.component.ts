@@ -39,6 +39,7 @@ export class GenderReachComponent implements OnInit {
       title: {
         text: 'Gender / Age',
         align: 'left',
+        offsetY: 20,
         style: {
           fontSize: '20px',
           fontWeight: 'bold',
