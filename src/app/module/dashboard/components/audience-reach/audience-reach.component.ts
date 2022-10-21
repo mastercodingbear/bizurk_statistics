@@ -44,7 +44,12 @@ export class AudienceReachComponent implements OnInit {
       },
       markers: {
         size: 6,
+        colors: ['#E786D7', '#7F7FD5'],
         strokeWidth: 0,
+        hover: {
+          size: 8,
+          sizeOffset: 0,
+        },
       },
       grid: {
         show: true,

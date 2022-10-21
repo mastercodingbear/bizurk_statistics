@@ -58,6 +58,7 @@ export class GenderReachComponent implements OnInit {
       colors: ['#E786D7', '#7F7FD5'],
       chart: {
         type: 'bar',
+        height: '100%',
         toolbar: {
           show: false,
         },
@@ -90,8 +91,6 @@ export class GenderReachComponent implements OnInit {
       yaxis: {
         min: 0,
         max: 40,
-        logBase: 400,
-        tickAmount: 10,
       },
       grid: {
         show: true,

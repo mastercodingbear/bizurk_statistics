@@ -5,7 +5,10 @@
 @tailwind utilities;
 
 html {
-  color: #4f4f4f;
+  color: #4f4f4f !important;
+  svg text {
+    fill: #4f4f4f;
+  }
   .text-secondary {
     color: #979797;
   }
@@ -21,7 +24,7 @@ h6 {
 }
 
 html.dark {
-  color: #cacaca;
+  color: #cacaca !important;
 
   .text-secondary {
     color: #979797;
@@ -34,5 +37,9 @@ html.dark {
   h5,
   h6 {
     color: #cacaca;
+  }
+
+  svg text {
+    fill: #cacaca;
   }
 }
