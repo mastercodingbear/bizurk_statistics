@@ -115,6 +115,7 @@ export class GenderReachComponent implements OnInit {
       legend: {
         position: 'top',
         horizontalAlign: 'right',
+        offsetY: -20,
       },
     };
   }
