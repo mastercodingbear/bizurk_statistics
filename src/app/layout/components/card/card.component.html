@@ -1,0 +1,79 @@
+<div
+  class="flex flex-col h-36 justify-between p-6 text-xl bg-light-secondary dark:bg-dark-secondary rounded-[13px] border border-light dark:border-dark"
+>
+  <div class="flex justify-between">
+    <h2 class="text-bold">{{ head }}</h2>
+    <button>
+      <svg
+        width="26"
+        height="5"
+        viewBox="0 0 26 5"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="2.5"
+          cy="2.5"
+          r="2.5"
+          transform="rotate(-90 2.5 2.5)"
+          fill="#979797"
+        />
+        <circle
+          cx="12.5"
+          cy="2.5"
+          r="2.5"
+          transform="rotate(-90 12.5 2.5)"
+          fill="#979797"
+        />
+        <circle
+          cx="23.5"
+          cy="2.5"
+          r="2.5"
+          transform="rotate(-90 23.5 2.5)"
+          fill="#979797"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div class="flex justify-between">
+    <p class="flex font-medium">{{ count }} people</p>
+    <div class="flex items-center">
+      <p class="mr-2 font-medium">
+        {{ increase > 0 ? "+" : "-" }} {{ Math.abs(increase) }}%
+      </p>
+      <ng-container *ngIf="increase > 0; else downgrade">
+        <svg
+          class="stroke-primary"
+          width="13"
+          height="14"
+          viewBox="0 0 13 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 6.07698L6.49995 0.999999M6.49995 0.999999L12 6.07698M6.49995 0.999999L6.49995 13"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </ng-container>
+      <ng-template #downgrade>
+        <svg
+          class="stroke-secondary"
+          width="13"
+          height="14"
+          viewBox="0 0 13 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 7.92302L6.50005 13M6.50005 13L1 7.92302M6.50005 13L6.50005 0.999999"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </ng-template>
+    </div>
+  </div>
+</div>

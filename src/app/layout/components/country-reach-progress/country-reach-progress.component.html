@@ -1,0 +1,15 @@
+<div class="flex flex-col">
+  <div class="flex justify-between mb-2">
+    <p>{{ country }}</p>
+    <p class="text-secondary">{{ percent }}%</p>
+  </div>
+  <div class="relative w-full h-[10px] rounded-[5px] bg-grey">
+    <span
+      class="absolute h-full bg-primary rounded-[5px] pl-[5px]"
+      [ngStyle]="{
+        width: percent > 50 ? percent + '%' : Math.round(percent * 5) + '%'
+      }"
+    >
+    </span>
+  </div>
+</div>

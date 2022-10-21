@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color: #4f4f4f;
+  .text-secondary {
+    color: #979797;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4f4f4f;
+}
+
+html.dark {
+  color: #cacaca;
+
+  .text-secondary {
+    color: #979797;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #cacaca;
+  }
+}
