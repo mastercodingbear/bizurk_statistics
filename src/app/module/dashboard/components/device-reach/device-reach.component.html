@@ -1,15 +1,16 @@
 <div
-  class="flex flex-col w-full h-full p-6 bg-light-secondary dark:bg-dark-secondary border border-light dark:border-dark rounded-[13px]"
+  class="flex flex-col w-full h-60 px-6 bg-light-secondary dark:bg-dark-secondary border border-light dark:border-dark rounded-[13px]"
 >
-  <h2 class="font-bold text-xl">Reach by device</h2>
   <apx-chart
-    class="flex justify-start flex-auto items-center"
+    class="relative h-full"
     [chart]="chartOptions.chart"
+    [title]="chartOptions.title"
     [colors]="chartOptions.colors"
     [labels]="chartOptions.labels"
     [dataLabels]="chartOptions.dataLabels"
     [plotOptions]="chartOptions.plotOptions"
     [series]="chartOptions.series"
     [states]="chartOptions.states"
+    [legend]="chartOptions.legend"
   ></apx-chart>
 </div>

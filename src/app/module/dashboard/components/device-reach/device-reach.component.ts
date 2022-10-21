@@ -10,6 +10,15 @@ export class DeviceReachComponent implements OnInit {
   public chartOptions: any;
   constructor() {
     this.chartOptions = {
+      title: {
+        text: 'Gender / Age',
+        align: 'left',
+        style: {
+          fontSize: '20px',
+          fontWeight: 'bold',
+          fontFamily: undefined,
+        },
+      },
       chart: {
         animations: {
           speed: 400,
@@ -17,13 +26,8 @@ export class DeviceReachComponent implements OnInit {
             enabled: false,
           },
         },
-        fontFamily: 'inherit',
-        foreColor: 'inherit',
         height: '100%',
         type: 'pie',
-        sparkline: {
-          enabled: true,
-        },
       },
       colors: ['#E786D7', '#7F7FD5'],
       dataLabels: {
@@ -35,7 +39,6 @@ export class DeviceReachComponent implements OnInit {
         pie: {
           startAngle: 40,
           endAngle: 400,
-          customScale: 0.9,
           expandOnClick: true,
         },
       },
@@ -52,6 +55,11 @@ export class DeviceReachComponent implements OnInit {
         },
       },
       series: [14, 86],
+      legend: {
+        position: 'top',
+        horizontalAlign: 'right',
+        offsetX: 20,
+      },
     };
   }
 
