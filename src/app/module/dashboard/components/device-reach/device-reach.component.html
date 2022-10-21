@@ -1,5 +1,5 @@
 <div
-  class="flex flex-col w-full h-60 px-6 bg-light-secondary dark:bg-dark-secondary border border-light dark:border-dark rounded-[13px]"
+  class="flex flex-col w-full h-60 bg-light-secondary dark:bg-dark-secondary border border-light dark:border-dark rounded-[13px]"
 >
   <apx-chart
     class="relative h-full"
@@ -11,6 +11,8 @@
     [plotOptions]="chartOptions.plotOptions"
     [series]="chartOptions.series"
     [states]="chartOptions.states"
+    [stroke]="chartOptions.stroke"
     [legend]="chartOptions.legend"
+    [yaxis]="chartOptions.yaxis"
   ></apx-chart>
 </div>

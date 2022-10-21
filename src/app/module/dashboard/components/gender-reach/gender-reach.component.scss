@@ -1,0 +1,22 @@
+app-gender-reach {
+  .apexcharts-gridlines-vertical .apexcharts-gridline,
+  .apexcharts-gridlines-horizontal .apexcharts-gridline {
+    stroke: #eff3f9;
+  }
+  .apexcharts-legend-series {
+    display: flex !important;
+    align-items: center;
+  }
+  .apexcharts-legend-marker {
+    margin-right: 8px;
+  }
+}
+
+html.dark {
+  app-gender-reach {
+    .apexcharts-gridlines-vertical .apexcharts-gridline,
+    .apexcharts-gridlines-horizontal .apexcharts-gridline {
+      stroke: #4d4d4d !important;
+    }
+  }
+}

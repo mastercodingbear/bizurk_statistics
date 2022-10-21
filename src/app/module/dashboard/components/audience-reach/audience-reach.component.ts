@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-audience-reach',
   templateUrl: './audience-reach.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./audience-reach.component.scss'],
 })
 export class AudienceReachComponent implements OnInit {
@@ -47,11 +48,10 @@ export class AudienceReachComponent implements OnInit {
         },
       },
       markers: {
-        size: 6,
-        colors: ['#E786D7', '#7F7FD5'],
+        size: 3,
         strokeWidth: 0,
         hover: {
-          size: 8,
+          size: 5,
           sizeOffset: 0,
         },
       },
@@ -59,7 +59,6 @@ export class AudienceReachComponent implements OnInit {
         show: true,
         borderColor: '#4D4D4D',
         strokeDashArray: 0,
-        position: 'back',
         xaxis: {
           lines: {
             show: true,
@@ -86,11 +85,38 @@ export class AudienceReachComponent implements OnInit {
         tooltip: {
           enabled: false,
         },
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: true,
+          borderType: 'solid',
+          height: 5,
+          offsetX: 0,
+          offsetY: 0,
+        },
+      },
+      yaxis: {
+        tickAmount: 4,
+        min: 0,
+        max: 3,
+        axisTicks: {
+          show: true,
+          borderType: 'solid',
+          height: 5,
+          offsetX: -1,
+          offsetY: 1,
+        },
       },
       legend: {
         position: 'top',
         horizontalAlign: 'right',
         offsetY: -20,
+        // markers: {
+        //   customHTML: function () {
+        //     return '<input type="checkbox" name="audience-total" id="audience-total" class="bg-transparent checked:text-transparent checked:hover:border-primary checked:border-primary focus:ring-0 focus:ring-offset-0 checked:focus:border-primary w-4 h-4 rounded-[5px] border-[1.5px] border-primary focus:outline-none"/>';
+        //   },
+        // },
       },
     };
   }

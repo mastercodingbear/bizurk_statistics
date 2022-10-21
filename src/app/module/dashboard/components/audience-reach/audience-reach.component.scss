@@ -1,0 +1,25 @@
+app-audience-reach {
+  .apexcharts-xaxis-tick,
+  .apexcharts-yaxis line {
+    stroke: #979797 !important;
+  }
+
+  .apexcharts-gridlines-vertical .apexcharts-gridline,
+  .apexcharts-gridlines-horizontal .apexcharts-gridline {
+    stroke: #eff3f9;
+  }
+}
+
+html.dark {
+  app-audience-reach {
+    .apexcharts-xaxis-tick,
+    .apexcharts-yaxis line {
+      stroke: #cacaca !important;
+    }
+
+    .apexcharts-gridlines-vertical .apexcharts-gridline,
+    .apexcharts-gridlines-horizontal .apexcharts-gridline {
+      stroke: #4d4d4d;
+    }
+  }
+}

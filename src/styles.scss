@@ -6,11 +6,28 @@
 
 html {
   color: #4f4f4f !important;
-  svg text {
-    fill: #4f4f4f;
-  }
+
   .text-secondary {
     color: #979797;
+  }
+
+  .apexcharts-title-text {
+    color: #4f4f4f !important;
+    font-weight: 700;
+  }
+
+  .apexcharts-legend-text {
+    color: #4f4f4f !important;
+    font-weight: 600;
+  }
+
+  .apexcharts-text.apexcharts-xaxis-label,
+  .apexcharts-text.apexcharts-yaxis-label {
+    color: #979797;
+  }
+
+  .apexcharts-text.apexcharts-pie-label {
+    fill: white !important;
   }
 }
 
@@ -41,5 +58,15 @@ html.dark {
 
   svg text {
     fill: #cacaca;
+  }
+
+  .apexcharts-text.apexcharts-xaxis-label,
+  .apexcharts-text.apexcharts-yaxis-label {
+    color: #979797;
+  }
+
+  .apexcharts-title-text,
+  .apexcharts-legend-text {
+    color: #cacaca !important;
   }
 }

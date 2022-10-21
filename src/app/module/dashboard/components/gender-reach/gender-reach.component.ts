@@ -1,34 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {
-  ApexAxisChartSeries,
-  ApexChart,
-  ChartComponent,
-  ApexDataLabels,
-  ApexPlotOptions,
-  ApexYAxis,
-  ApexLegend,
-  ApexStroke,
-  ApexXAxis,
-  ApexFill,
-  ApexTooltip,
-} from 'ng-apexcharts';
-
-export type ChartOptions = {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  dataLabels: ApexDataLabels;
-  plotOptions: ApexPlotOptions;
-  yaxis: ApexYAxis;
-  xaxis: ApexXAxis;
-  fill: ApexFill;
-  tooltip: ApexTooltip;
-  stroke: ApexStroke;
-  legend: ApexLegend;
-};
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-gender-reach',
   templateUrl: './gender-reach.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./gender-reach.component.scss'],
 })
 export class GenderReachComponent implements OnInit {
@@ -59,6 +34,7 @@ export class GenderReachComponent implements OnInit {
       colors: ['#E786D7', '#7F7FD5'],
       chart: {
         type: 'bar',
+        width: '100%',
         height: '100%',
         toolbar: {
           show: false,
@@ -68,16 +44,16 @@ export class GenderReachComponent implements OnInit {
         bar: {
           horizontal: false,
           columnWidth: '70%',
+          borderRadius: 5,
         },
       },
       dataLabels: {
         enabled: false,
       },
-      stroke: {
-        show: true,
-        width: 2,
-      },
       xaxis: {
+        axisTicks: {
+          show: false,
+        },
         categories: [
           '<18',
           '18-21',
@@ -92,6 +68,27 @@ export class GenderReachComponent implements OnInit {
       yaxis: {
         min: 0,
         max: 40,
+        tickAmount: 2,
+        axisTicks: {
+          show: true,
+          borderType: 'solid',
+          color: '#979797',
+          height: 5,
+          offsetX: -1,
+          offsetY: 1,
+        },
+        labels: {
+          show: true,
+          align: 'right',
+          minWidth: 0,
+          maxWidth: 160,
+          offsetX: 0,
+          offsetY: 0,
+          rotate: 0,
+          formatter: (value: number) => {
+            return `${value} %`;
+          },
+        },
       },
       grid: {
         show: true,
@@ -116,6 +113,11 @@ export class GenderReachComponent implements OnInit {
         position: 'top',
         horizontalAlign: 'right',
         offsetY: -20,
+        markers: {
+          width: 16,
+          height: 16,
+          radius: 5,
+        },
       },
     };
   }

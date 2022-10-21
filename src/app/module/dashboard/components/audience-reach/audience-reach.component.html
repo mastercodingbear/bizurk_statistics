@@ -1,46 +1,6 @@
 <div
   class="flex flex-col w-full h-60 px-6 bg-light-secondary dark:bg-dark-secondary border border-light dark:border-dark rounded-[13px]"
 >
-  <!-- <h2 class="font-bold text-xl">Audience reach</h2>
-    <div class="flex items-center">
-      <p class="mr-2">31/01/2020 – 06/02/2020</p>
-      <span class="stroke-light dark:stroke-dark">
-        <svg
-          width="9"
-          height="6"
-          viewBox="0 0 9 6"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 1L4.93749 5L8 1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
-    </div>
-    <div class="flex">
-      <div class="flex items-center mr-2 select-none">
-        <input
-          type="checkbox"
-          checked
-          name="audience-total"
-          id="audience-total"
-          class="bg-transparent checked:text-transparent checked:hover:border-primary checked:border-primary focus:ring-0 focus:ring-offset-0 checked:focus:border-primary w-4 h-4 rounded-[5px] border-[1.5px] border-primary focus:outline-none"
-        />
-        <label for="audience-total" class="ml-[6px]">Total</label>
-      </div>
-      <div class="flex items-center select-none">
-        <input
-          type="checkbox"
-          name="audience-follower"
-          id="audience-follower"
-          class="bg-transparent checked:text-transparent checked:hover:border-secondary checked:border-secondary focus:ring-0 focus:ring-offset-0 checked:focus:border-secondary w-4 h-4 rounded-[5px] border-[1.5px] border-secondary focus:outline-none"
-        />
-        <label for="audience-follower" class="ml-[6px]">Follower</label>
-      </div>
-    </div> -->
   <apx-chart
     class="relative h-full"
     [chart]="chartOptions.chart"
@@ -52,6 +12,7 @@
     [grid]="chartOptions.grid"
     [labels]="chartOptions.labels"
     [xaxis]="chartOptions.xaxis"
+    [yaxis]="chartOptions.yaxis"
     [legend]="chartOptions.legend"
   ></apx-chart>
 </div>
